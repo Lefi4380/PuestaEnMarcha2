@@ -1,4 +1,4 @@
-import pandas as pd 
+simport pandas as pd 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
@@ -12,10 +12,10 @@ seed = 42
 ################################
 
 # Load in the data
-df = pd.read_csv("wine_quality.csv")
+df = pd.read_csv("diabetes.csv")
 
 # Split into train and test sections
-y = df.pop("quality")
+y = df.pop("Glucose")
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.2, random_state=seed)
 
 #################################
@@ -71,8 +71,8 @@ res_df = pd.DataFrame(list(zip(y_jitter,y_pred)), columns = ["true","pred"])
 
 ax = sns.scatterplot(x="true", y="pred",data=res_df)
 ax.set_aspect('equal')
-ax.set_xlabel('True wine quality',fontsize = axis_fs) 
-ax.set_ylabel('Predicted wine quality', fontsize = axis_fs)#ylabel
+ax.set_xlabel('True Glucose',fontsize = axis_fs) 
+ax.set_ylabel('Predicted Glucose', fontsize = axis_fs)#ylabel
 ax.set_title('Residuals', fontsize = title_fs)
 
 # Make it pretty- square aspect ratio
