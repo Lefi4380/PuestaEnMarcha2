@@ -1,4 +1,4 @@
-name: wine-jfc
+name: diabetes-jfc
 on: [push]
 jobs:
   run:
