@@ -7,10 +7,9 @@ seed = 42
 # Generate data
 X, y = make_classification(n_samples = 100000, random_state=seed)
 
-<<<<<<< HEAD
+
 # Make a train test split
 X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=seed)
-=======
 ################################
 ########## DATA PREP ###########
 ################################
@@ -86,7 +85,6 @@ plt.xlim((2.5,8.5))
 
 plt.tight_layout()
 plt.savefig("residuals.png",dpi=120) 
->>>>>>> 84d4cef6bce1109dd431e67c0028dde1eb69bf31
 
 # Save it
 if not os.path.isdir("data"):
