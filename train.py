@@ -15,7 +15,7 @@ seed = 42
 df = pd.read_csv("diabetes.csv")
 
 # Split into train and test sections
-y = df.pop("quality")
+y = df.pop("Glucose")
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.2, random_state=seed)
 
 #################################
