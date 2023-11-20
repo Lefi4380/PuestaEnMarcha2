@@ -4,13 +4,9 @@ from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+# Set random seed
 seed = 42
-# Generate data
-X, y = make_classification(n_samples = 100000, random_state=seed)
 
-
-# Make a train test split
-X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=seed)
 ################################
 ########## DATA PREP ###########
 ################################
@@ -19,7 +15,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=seed)
 df = pd.read_csv("diabetes.csv")
 
 # Split into train and test sections
-y = df.pop("Glucose")
+y = df.pop("quality")
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.2, random_state=seed)
 
 #################################
@@ -86,12 +82,3 @@ plt.xlim((2.5,8.5))
 
 plt.tight_layout()
 plt.savefig("residuals.png",dpi=120) 
-
-# Save it
-if not os.path.isdir("data"):
-    os.mkdir("data")
-np.savetxt("data/train_diabetes.csv",X_train)
-np.savetxt("data/test_diabetes.csv",X_test)
-np.savetxt("data/train_diabetes.csv",y_train)
-np.savetxt("data/test_diabetes.csv",y_test)
-#HOLA MUNDO
