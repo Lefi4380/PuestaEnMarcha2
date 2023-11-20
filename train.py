@@ -17,5 +17,4 @@ np.savetxt("data/train_diabetes.csv",X_train)
 np.savetxt("data/test_diabetes.csv",X_test)
 np.savetxt("data/train_diabetes.csv",y_train)
 np.savetxt("data/test_diabetes.csv",y_test)
-
-
+#HOLA MUNDO
