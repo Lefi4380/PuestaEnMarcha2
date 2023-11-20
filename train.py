@@ -1,10 +1,9 @@
-from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import recall_score, precision_score
-import json
-import os
+import pandas as pd 
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
-import pandas as pd
-
 seed = 42
 # Generate data
 X, y = make_classification(n_samples = 100000, random_state=seed)
