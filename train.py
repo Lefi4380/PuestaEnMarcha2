@@ -7,7 +7,7 @@ import numpy as np
 
 seed = 42
 
-#Esto una actualización.
+
 
 df = pd.read_csv("diabetes.csv")
 
